@@ -1,27 +1,31 @@
 package com.sapient.dao;
 
-import static org.junit.Assert.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.internal.runners.TestClass;
+
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Suite.SuiteClasses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.sapient.model.Note;
+
 @RunWith(SpringRunner.class)
-@SuiteClasses({DataJpaUnitTest.class})
 @DataJpaTest
 public class DataJpaUnitTest {
  
-    @Autowired
-    TestEntityManager entityManager;
+	@Autowired
+    private NoteRepository repository;
 
     @Test
-    public void givenACorrectSetup_thenAnEntityManagerWillBeAvailable() {
-        assertNotNull(entityManager);
+    public void should_find_all_customers() {
+
+        Iterable<Note> notes = repository.findAll();
+       
+        assertThat(notes).isNotEmpty();
     }
 
 }
