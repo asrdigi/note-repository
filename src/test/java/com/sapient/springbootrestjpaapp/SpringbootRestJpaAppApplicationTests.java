@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.sapient.springbootrestjpaapp.SpringbootRestJpaAppApplication;
 
-@SpringBootTest(classes = com.sapient.springbootrestjpaapp.SpringbootRestJpaAppApplication.class
+@SpringBootTest(classes = SpringbootRestJpaAppApplication.class
 )
 public class SpringbootRestJpaAppApplicationTests {
 
