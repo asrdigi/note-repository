@@ -1,15 +1,15 @@
-package com.navis.springbootrestjpaapp;
+package com.sapient.springbootrestjpaapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.sapient.springbootrestjpaapp.SpringbootRestJpaAppApplication;
 
-@SpringBootTest(classes = SpringbootRestJpaAppApplication.class)
-class SpringbootRestJpaAppApplicationTests {
+@SpringBootTest
+public class SpringbootRestJpaAppApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
