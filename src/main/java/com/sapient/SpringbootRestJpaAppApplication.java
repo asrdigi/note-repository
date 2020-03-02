@@ -18,7 +18,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication(scanBasePackages="com.sapient")
 @EnableJpaAuditing
 @EnableJpaRepositories(basePackages="com.sapient.dao")
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @EntityScan("com.sapient.model")
 @EnableSwagger2
 public class SpringbootRestJpaAppApplication {
