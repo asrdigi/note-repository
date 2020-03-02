@@ -1,4 +1,4 @@
-package com.sapient.app;
+package com.sapient;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
