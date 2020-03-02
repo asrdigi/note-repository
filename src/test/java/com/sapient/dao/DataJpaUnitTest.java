@@ -15,9 +15,10 @@ public class DataJpaUnitTest {
  
     @Autowired
     TestEntityManager entityManager;
- 
+
     @Test
     public void givenACorrectSetup_thenAnEntityManagerWillBeAvailable() {
         assertNotNull(entityManager);
     }
+
 }
