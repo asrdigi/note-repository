@@ -2,8 +2,8 @@ package com.sapient.dao;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.Ignore;
-import org.junit.jupiter.api.Disabled;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +22,13 @@ public class DataJpaUnitTest {
 	@Autowired
     private NoteRepository repository;
 
-	@Disabled
+
     @Test
     public void should_find_all_customersTest() {
 
-        Iterable<Note> notes = repository.findAll();
-       
-        assertThat(notes).isNotEmpty();
+        List<Note> notes = repository.findAll();
+        System.out.println(notes.size());
+        assertThat(notes).hasSizeGreaterThanOrEqualTo(2);
     }
 
 }
