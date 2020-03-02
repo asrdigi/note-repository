@@ -21,7 +21,7 @@ public class DataJpaUnitTest {
     private NoteRepository repository;
 
     @Test
-    public void should_find_all_customers() {
+    public void should_find_all_customersTest() {
 
         Iterable<Note> notes = repository.findAll();
        
