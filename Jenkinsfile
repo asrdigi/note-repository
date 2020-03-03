@@ -7,6 +7,11 @@ pipeline {
 	       echo 'Hello Testing done'
        }
    	}
+	stage('Jacoco Coverage Report') {
+        steps{
+            jacoco()
+        }
+  }
  	stage('SonarQube'){
        steps{
            bat label: '', script: '''mvn sonar:sonar \
